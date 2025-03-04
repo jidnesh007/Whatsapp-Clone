@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f8f8f8;
+  font-family: "Roboto", sans-serif;
+  background-image: url(back1.jpg);
+  background-size: cover;
+}
+
+.chat_section {
+  width: 100%;
+  max-width: 800px;
+  background: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.brand {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+.brand h1 {
+  font-size: 20px;
+  color: #e8e8e8;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 30px;
+  
+}
+
+.brand a i {
+  color: white;
+  font-size: 23px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50px;
+  transition: background-color 0.8s ease;
+}
+
+.brand i:hover {
+  background-color: rgb(84, 84, 84);
+}
+
+.message_area {
+  height: 500px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-top: 40px;
+  background-image: url(box3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  outline: none;
+  background: #fbfbfb;
+  resize: none;
+}
+
+.message {
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  max-width: 80%;
+  position: relative;
+}
+
+.incoming {
+  background-color: rgb(86, 189, 223);
+  color: white;
+}
+
+.outgoing {
+  background-color: rgb(88, 88, 255);
+  color: #fff;
+  align-self: flex-end;
+}
+
+.message h4 {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  color: white;
+  font-size: 14px;
+}
+
+#video-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .chat_section {
+    width: 90%;
+  }
+
+  .brand h1 {
+    font-size: 18px;
+  }
+
+  .message_area {
+    height: 400px;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+
+  .outgoing {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .brand h1 {
+    font-size: 16px;
+  }
+
+  .message_area {
+    height: 300px;
+  }
+
+  .message {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  textarea {
+    padding: 15px;
+  }
+}
